@@ -16,10 +16,10 @@ app.post('/events', (req, res) => {
 
   events.push(event);
 
-  axios.post('http://localhost:3001/events', event).catch(err => console.error(err.message));
-  axios.post('http://localhost:3002/events', event).catch(err => console.error(err.message));
-  axios.post('http://localhost:3003/events', event).catch(err => console.error(err.message));
-  axios.post('http://localhost:3004/events', event).catch(err => console.error(err.message));
+  axios.post('http://posts-service:3001/events', event).catch(err => console.error(err.message));
+  // axios.post('http://localhost:3002/events', event).catch(err => console.error(err.message));
+  // axios.post('http://localhost:3003/events', event).catch(err => console.error(err.message));
+  // axios.post('http://localhost:3004/events', event).catch(err => console.error(err.message));
 
   res.send({ status: 'OK' });
 });
